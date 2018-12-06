@@ -31,7 +31,7 @@ public class MyUI extends UI {
         
         final TextField name = new TextField();
 
-        name.setCaption("Įveskite įmonės pavadinimą: ");
+        name.setCaption("Įveskite įmonės pavadinimą, " + "pvz.:" + foe.customer());
 
         Button button = new Button("Spausk");
         button.addClickListener(e -> {
