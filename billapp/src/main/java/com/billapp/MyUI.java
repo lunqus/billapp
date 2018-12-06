@@ -27,12 +27,12 @@ public class MyUI extends UI {
         final VerticalLayout layout = new VerticalLayout();
         
         final TextField name = new TextField();
-        name.setCaption("Įveskite savo vardą: ");
+        name.setCaption("Įveskite įmonės pavadinimą: ");
 
         Button button = new Button("Spausk");
         button.addClickListener(e -> {
             layout.addComponent(new Label("Ačiū, " + name.getValue()
-                    + ", turime!"));
+                    + ", pagavome!"));
         });
         
         layout.addComponents(name, button);
