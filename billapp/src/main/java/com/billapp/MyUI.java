@@ -22,11 +22,15 @@ import com.vaadin.ui.VerticalLayout;
 @Theme("mytheme")
 public class MyUI extends UI {
 
+    Invoice in = new Invoice();
+    Foe foe = new Foe();
+
     @Override
     protected void init(VaadinRequest vaadinRequest) {
         final VerticalLayout layout = new VerticalLayout();
         
         final TextField name = new TextField();
+
         name.setCaption("Įveskite įmonės pavadinimą: ");
 
         Button button = new Button("Spausk");
