@@ -1,4 +1,4 @@
-package com.billapp;
+package data;
 
 /**
  *
