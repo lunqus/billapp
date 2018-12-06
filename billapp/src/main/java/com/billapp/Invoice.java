@@ -27,8 +27,8 @@ public class Invoice {
         float discount;
         String amountInWords;
 
-        item = "Mercedes Benz";
-        service = "Financial Services";
+        item = "Java Super Package";
+        service = "Delivery Services";
 
 
         System.out.println( "Preke: " + item);
