@@ -1,6 +1,5 @@
 package com.billapp;
 
-public class InvoiceMain {
 
     public class InvoiceMain {
 
@@ -19,4 +18,5 @@ public class InvoiceMain {
 
         }
 
-}
+    }
+
