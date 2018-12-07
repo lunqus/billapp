@@ -29,7 +29,6 @@ public class MyUI extends UI {
         final TextField name = new TextField();
 
 
-
         name.setCaption("Įveskite įmonės pavadinimą");
 
         Button button = new Button("Spausk");
