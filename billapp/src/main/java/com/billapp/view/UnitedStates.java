@@ -1,6 +1,6 @@
 package com.billapp.view;
 
-public class USA {
+public class UnitedStates {
 
     public static void main(String[] args) {
         String p1 = "* * * * * * ==================================\n * * * * *  ==================================";
