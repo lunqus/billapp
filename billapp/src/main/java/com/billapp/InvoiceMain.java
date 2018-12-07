@@ -1,20 +1,36 @@
 package com.billapp;
 
 
-    public class InvoiceMain {
+import java.util.ArrayList;
+
+public class InvoiceMain {
 
         public static void main(String[] args) {
             // Prints Customer, Seller and Item or Service to the terminal window.
 
-            Invoice in = new Invoice();
-            Foe foe = new Foe();
+            Company com = new Company();
+            // com.setInvoices(new ArrayList<>());
+            com.getInvoices().add(new Invoice());
 
-            foe.seller();
-            foe.customer();
+            Invoice inv = new Invoice();
 
-            System.out.println();
+            inv.setSeller();
+            inv.setCustomer();
 
-            in.records();
+            inv.setInvoiceNum(); // nepaduotas parametras ir todel siulo overloadinta etoda susikurti
+
+            inv.setInvoiceIssueDate();
+            inv.setInvoicePayDate();
+
+            inv.setOperationName();
+            inv.setOperationCode();
+
+            inv.setItems();
+
+            inv.setUnitPrice();
+            inv.setVat();
+            inv.setDiscount();
+            inv.setAmountInWords();
 
 
         }
