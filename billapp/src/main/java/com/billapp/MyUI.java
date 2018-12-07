@@ -35,7 +35,7 @@ public class MyUI extends UI {
         Button button = new Button("Spausk");
         button.addClickListener(e -> {
             layout.addComponent(new Label("Ačiū, " + name.getValue()
-                    + ", tinka!"));
+                    + ", priimtas!"));
         });
         
         layout.addComponents(name, button);

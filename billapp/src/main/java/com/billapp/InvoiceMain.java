@@ -4,7 +4,7 @@ package com.billapp;
     public class InvoiceMain {
 
         public static void main(String[] args) {
-            // Prints "Hello, World" to the terminal window.
+            // Prints Customer, Seller and Item or Service to the terminal window.
 
             Invoice in = new Invoice();
             Foe foe = new Foe();
