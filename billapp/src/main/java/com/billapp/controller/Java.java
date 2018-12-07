@@ -1,4 +1,4 @@
-package com.billapp;
+package com.billapp.controller;
 
 public class Java {
 
