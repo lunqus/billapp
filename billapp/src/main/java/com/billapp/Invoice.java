@@ -3,12 +3,6 @@ package com.billapp;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Sigitas Lunkus
- *
- */
-
 public class Invoice {
 
     private Partner seller;
