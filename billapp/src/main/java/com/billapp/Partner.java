@@ -6,6 +6,9 @@ public class Partner {
     private String vat;
     private String address;
     private String city;
+    private String country;
+    private String bank;
+
 
     public String getCode() {
         return code;
@@ -55,8 +58,6 @@ public class Partner {
         this.bank = bank;
     }
 
-    private String country;
-    private String bank;
 
 
 }
