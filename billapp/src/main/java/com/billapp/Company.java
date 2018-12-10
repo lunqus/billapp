@@ -32,4 +32,13 @@ public class Company {
     public void setSellers(List<Partner> sellers) {
         this.sellers = sellers;
     }
+
+
+//    public String void items() {
+//
+//        for (int i = 1; i < length.itemName ; i++ ) {
+//
+//        }
+//    }
+
 }

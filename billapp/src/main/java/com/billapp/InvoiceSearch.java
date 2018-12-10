@@ -8,6 +8,9 @@ public class InvoiceSearch {
 
         // rasyti paieskos algoritma
 
+        company.getInvoices()
+
+
         return null;
 
     }

@@ -8,7 +8,7 @@ public class Invoice {
     private Partner seller;
     private Partner customer;
 
-    private char invoiceNum;
+    private String invoiceNum;
 
     private long invoiceIssueDate;
     private long invoicePayDate;

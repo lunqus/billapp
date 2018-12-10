@@ -2,6 +2,7 @@ package com.billapp;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class InvoiceMain {
 
@@ -10,27 +11,40 @@ public class InvoiceMain {
 
             Company com = new Company();
             // com.setInvoices(new ArrayList<>());
-            com.getInvoices().add(new Invoice());
+           // com.getInvoices().add(new Invoice());
 
             Invoice inv = new Invoice();
+            inv.setSeller(new Partner());
+            inv.setCustomer(new Partner());
+            inv.setInvoiceNum("hgfhgf76547645"); // nepaduotas parametras ir todel siulo overloadinta etoda susikurti
+            inv.getItems().add(new Item("kojines"));
+            inv.getItems().add(new Item("kojines"));
+            com.getInvoices().add(inv);
 
-            inv.setSeller();
-            inv.setCustomer();
+            inv = new Invoice();
+            inv.setSeller(new Partner());
+            inv.setCustomer(new Partner());
+            inv.setInvoiceNum("ėįšėį"); // nepaduotas parametras ir todel siulo overloadinta etoda susikurti
+            inv.getItems().add(new Item("asd"));
+            inv.getItems().add(new Item("asdč"));
+            com.getInvoices().add(inv);
 
-            inv.setInvoiceNum(); // nepaduotas parametras ir todel siulo overloadinta etoda susikurti
+            inv = new Invoice();
+            inv.setSeller(new Partner());
+            inv.setCustomer(new Partner());
+            inv.setInvoiceNum("retetert"); // nepaduotas parametras ir todel siulo overloadinta etoda susikurti
+            inv.getItems().add(new Item("kojimnes"));
+            inv.getItems().add(new Item("asdč"));
+            com.getInvoices().add(inv);
 
-            inv.setInvoiceIssueDate();
-            inv.setInvoicePayDate();
+            InvoiceSearch search = new InvoiceSearch();
 
-            inv.setOperationName();
-            inv.setOperationCode();
+            List<Invoice> searchResult = search.searchByItem(com, "kojnes");
 
-            inv.setItems();
-
-            inv.setUnitPrice();
-            inv.setVat();
-            inv.setDiscount();
-            inv.setAmountInWords();
+            for (Invoice invoice: searchResult
+                 ) {
+                System.out.println( invoice.getInvoiceNum());
+            }
 
 
         }
