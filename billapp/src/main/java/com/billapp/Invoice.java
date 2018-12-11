@@ -26,15 +26,11 @@ public class Invoice {
     public Partner getSeller() {
         return seller;
     }
-
     public void setSeller(Partner seller) {
         this.seller = seller;
     }
 
-    public Partner getCustomer() {
-        return customer;
-    }
-
+    public Partner getCustomer() { return customer; }
     public void setCustomer(Partner customer) {
         this.customer = customer;
     }
@@ -42,7 +38,6 @@ public class Invoice {
     public String getInvoiceNum() {
         return invoiceNum;
     }
-
     public void setInvoiceNum(String invoiceNum) {
         this.invoiceNum = invoiceNum;
     }
@@ -50,7 +45,6 @@ public class Invoice {
     public long getInvoiceIssueDate() {
         return invoiceIssueDate;
     }
-
     public void setInvoiceIssueDate(long invoiceIssueDate) {
         this.invoiceIssueDate = invoiceIssueDate;
     }
@@ -58,7 +52,6 @@ public class Invoice {
     public long getInvoicePayDate() {
         return invoicePayDate;
     }
-
     public void setInvoicePayDate(long invoicePayDate) {
         this.invoicePayDate = invoicePayDate;
     }
@@ -66,7 +59,6 @@ public class Invoice {
     public char getOperationName() {
         return operationName;
     }
-
     public void setOperationName(char operationName) {
         this.operationName = operationName;
     }
@@ -74,23 +66,16 @@ public class Invoice {
     public char getOperationCode() {
         return operationCode;
     }
-
     public void setOperationCode(char operationCode) {
         this.operationCode = operationCode;
     }
 
-    public List<Item> getItems() {
-        return items;
-    }
-
-    public void setItems(List<Item> items) {
-        this.items = items;
-    }
+    public List<Item> getItems() { return items; }
+    public void setItems(List<Item> items) { this.items = items; }
 
     public float getUnitPrice() {
         return unitPrice;
     }
-
     public void setUnitPrice(float unitPrice) {
         this.unitPrice = unitPrice;
     }
@@ -98,7 +83,6 @@ public class Invoice {
     public float getVat() {
         return vat;
     }
-
     public void setVat(float vat) {
         this.vat = vat;
     }
@@ -106,7 +90,6 @@ public class Invoice {
     public float getDiscount() {
         return discount;
     }
-
     public void setDiscount(float discount) {
         this.discount = discount;
     }
@@ -114,7 +97,6 @@ public class Invoice {
     public String getAmountInWords() {
         return amountInWords;
     }
-
     public void setAmountInWords(String amountInWords) {
         this.amountInWords = amountInWords;
     }

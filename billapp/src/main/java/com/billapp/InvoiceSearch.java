@@ -14,18 +14,18 @@ public class InvoiceSearch {
 //        for (Invoice invoice : company.getInvoices()) {
 //            if(invoice.getItems().equals(itemName)) {
 //                searchResult.add(invoice);
-//                // return result;
+//                // return searchResult;
 //            }
-        for (Invoice invoice : company.getInvoices()) {
-            if(invoice.getItems().equals(itemName)) {
-                searchResult.add(invoice);
 
-                System.out.println(invoice);
-//                 return searchResult;
+
+        for (Invoice invoice : company.getInvoices()) {
+                if(invoice.getItems().equals(itemName)) {
+                   searchResult.add(invoice);
+
             }
 
 
-            return searchResult;
+             return searchResult;
         }
 
         return null;

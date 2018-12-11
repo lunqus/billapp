@@ -24,9 +24,10 @@ public class InvoiceMain {
             inv = new Invoice();
             inv.setSeller(new Partner());
             inv.setCustomer(new Partner());
-            inv.setInvoiceNum("Second_S9787"); // nepaduotas parametras ir todel siulo overloadinta etoda susikurti
+            inv.setInvoiceNum("Seconf_563253"); // nepaduotas parametras ir todel siulo overloadinta etoda susikurti
             inv.getItems().add(new Item("Pirstines"));
-            inv.getItems().add(new Item("Marskiniai"));
+            inv.getItems().add(new Item("Liemene"));
+            inv.getItems().add(new Item("Kelnes"));
             com.getInvoices().add(inv);
 
             inv = new Invoice();
@@ -37,9 +38,10 @@ public class InvoiceMain {
             inv.getItems().add(new Item("Megztinis"));
             com.getInvoices().add(inv);
 
+
             InvoiceSearch search = new InvoiceSearch();
 
-            List<Invoice> searchResult = search.searchByItem(com, "Megztinis");
+            List<Invoice> searchResult = search.searchByItem(com, "Kojines");
 
             for (Invoice invoice: searchResult) {
                 System.out.println( invoice.getInvoiceNum());
