@@ -10,8 +10,8 @@ public class InvoiceMain {
             // Prints Customer, Seller and Item or Service to the terminal window.
 
             Company com = new Company();
-//            com.setInvoices(new ArrayList<>());
-//            com.getInvoices().add(new Invoice());
+            // com.setInvoices(new ArrayList<>());
+           // com.getInvoices().add(new Invoice());
 
             Invoice inv = new Invoice();
             inv.setSeller(new Partner());

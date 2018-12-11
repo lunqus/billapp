@@ -6,22 +6,23 @@ import java.util.List;
 
 public class InvoiceSearch {
 
-    List<Invoice> searchByItem (Company company , String itemName) {
+    List<Invoice> searchByItem(Company company, String itemName) {
 
-        // rasyti paieskos algoritma
-         List<Invoice> searchResult = new ArrayList<>();
+        List<Invoice> searchResult = new ArrayList<>();
 
-         for (Invoice invoice : company.getInvoices()) {
-            if (invoice.getItems().equals(itemName)) {
-                searchResult.add(invoice);
+        for (Invoice invoice : company.getInvoices()) {
+
+            for (Item item : invoice.getItems()) {
+                if (item.getName().contains(itemName)) {
+                    searchResult.add(invoice);
+                    break;
+                }
             }
-            return searchResult;
         }
-        return null;
-
+        return searchResult;
     }
 
-    List<Invoice> searchBySeller (Company company , String sellerName) {
+    List<Invoice> searchBySeller(Company company, String sellerName) {
 
         // rasyti paieskos algoritma
 
@@ -29,7 +30,7 @@ public class InvoiceSearch {
 
     }
 
-    List<Invoice> searchByCustomer (Company company , String customerName) {
+    List<Invoice> searchByCustomer(Company company, String customerName) {
 
         // rasyti paieskos algoritma
 

@@ -9,9 +9,7 @@ public class Company {
     private List<Partner> customers = new ArrayList<>();
     private List<Partner> sellers = new ArrayList<>();
 
-    public List<Invoice> getInvoices() {
-        return invoices;
-    }
+    public List<Invoice> getInvoices() { return invoices; }
     public void setInvoices(List<Invoice> invoices) {
         this.invoices = invoices;
     }
