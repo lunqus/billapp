@@ -2,6 +2,7 @@ package com.billapp;
 
 public class Partner {
 
+    private String name;
     private String code;
     private String vat;
     private String address;
@@ -10,10 +11,12 @@ public class Partner {
     private String bank;
 
 
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
+
     public String getCode() {
         return code;
     }
-
     public void setCode(String code) {
         this.code = code;
     }
@@ -21,7 +24,6 @@ public class Partner {
     public String getVat() {
         return vat;
     }
-
     public void setVat(String vat) {
         this.vat = vat;
     }
@@ -29,7 +31,6 @@ public class Partner {
     public String getAddress() {
         return address;
     }
-
     public void setAddress(String address) {
         this.address = address;
     }
@@ -37,7 +38,6 @@ public class Partner {
     public String getCity() {
         return city;
     }
-
     public void setCity(String city) {
         this.city = city;
     }
@@ -45,7 +45,6 @@ public class Partner {
     public String getCountry() {
         return country;
     }
-
     public void setCountry(String country) {
         this.country = country;
     }
@@ -53,7 +52,6 @@ public class Partner {
     public String getBank() {
         return bank;
     }
-
     public void setBank(String bank) {
         this.bank = bank;
     }

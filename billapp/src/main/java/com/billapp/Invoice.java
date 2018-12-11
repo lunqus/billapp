@@ -39,11 +39,11 @@ public class Invoice {
         this.customer = customer;
     }
 
-    public char getInvoiceNum() {
+    public String getInvoiceNum() {
         return invoiceNum;
     }
 
-    public void setInvoiceNum(char invoiceNum) {
+    public void setInvoiceNum(String invoiceNum) {
         this.invoiceNum = invoiceNum;
     }
 

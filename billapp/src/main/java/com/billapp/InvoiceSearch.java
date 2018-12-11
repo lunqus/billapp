@@ -1,5 +1,6 @@
 package com.billapp;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class InvoiceSearch {
@@ -7,11 +8,16 @@ public class InvoiceSearch {
     List<Invoice> searchByItem (Company company , String itemName) {
 
         // rasyti paieskos algoritma
+        List<Invoice> result = new ArrayList<>();
 
-        company.getInvoices()
+        for (Invoice invoice : company.getInvoices()) {
+            if(invoice.getItems().equals(itemName)) {
+                result.add(invoice);
+                //return result;
+            }
+        }
 
-
-        return null;
+        return result;
 
     }
 

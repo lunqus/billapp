@@ -16,33 +16,32 @@ public class InvoiceMain {
             Invoice inv = new Invoice();
             inv.setSeller(new Partner());
             inv.setCustomer(new Partner());
-            inv.setInvoiceNum("hgfhgf76547645"); // nepaduotas parametras ir todel siulo overloadinta etoda susikurti
-            inv.getItems().add(new Item("kojines"));
-            inv.getItems().add(new Item("kojines"));
+            inv.setInvoiceNum("First_1237"); // nepaduotas parametras ir todel siulo overloadinta etoda susikurti
+            inv.getItems().add(new Item("Kojines"));
+            inv.getItems().add(new Item("Kojines"));
             com.getInvoices().add(inv);
 
             inv = new Invoice();
             inv.setSeller(new Partner());
             inv.setCustomer(new Partner());
-            inv.setInvoiceNum("ėįšėį"); // nepaduotas parametras ir todel siulo overloadinta etoda susikurti
-            inv.getItems().add(new Item("asd"));
-            inv.getItems().add(new Item("asdč"));
+            inv.setInvoiceNum("Second_S9787"); // nepaduotas parametras ir todel siulo overloadinta etoda susikurti
+            inv.getItems().add(new Item("Pirstines"));
+            inv.getItems().add(new Item("Marskiniai"));
             com.getInvoices().add(inv);
 
             inv = new Invoice();
             inv.setSeller(new Partner());
             inv.setCustomer(new Partner());
-            inv.setInvoiceNum("retetert"); // nepaduotas parametras ir todel siulo overloadinta etoda susikurti
-            inv.getItems().add(new Item("kojimnes"));
-            inv.getItems().add(new Item("asdč"));
+            inv.setInvoiceNum("Third_87675"); // nepaduotas parametras ir todel siulo overloadinta etoda susikurti
+            inv.getItems().add(new Item("Kojines"));
+            inv.getItems().add(new Item("Megztinis"));
             com.getInvoices().add(inv);
 
             InvoiceSearch search = new InvoiceSearch();
 
-            List<Invoice> searchResult = search.searchByItem(com, "kojnes");
+            List<Invoice> searchResult = search.searchByItem(com, "Megztinis");
 
-            for (Invoice invoice: searchResult
-                 ) {
+            for (Invoice invoice: searchResult) {
                 System.out.println( invoice.getInvoiceNum());
             }
 
