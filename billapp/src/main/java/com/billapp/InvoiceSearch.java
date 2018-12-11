@@ -9,25 +9,14 @@ public class InvoiceSearch {
     List<Invoice> searchByItem (Company company , String itemName) {
 
         // rasyti paieskos algoritma
-        List<Invoice> searchResult = new ArrayList<>();
+         List<Invoice> searchResult = new ArrayList<>();
 
-//        for (Invoice invoice : company.getInvoices()) {
-//            if(invoice.getItems().equals(itemName)) {
-//                searchResult.add(invoice);
-//                // return searchResult;
-//            }
-
-
-        for (Invoice invoice : company.getInvoices()) {
-                if(invoice.getItems().equals(itemName)) {
-                   searchResult.add(invoice);
-
+         for (Invoice invoice : company.getInvoices()) {
+            if (invoice.getItems().equals(itemName)) {
+                searchResult.add(invoice);
             }
-
-
-             return searchResult;
+            return searchResult;
         }
-
         return null;
 
     }
