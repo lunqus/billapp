@@ -8,31 +8,42 @@ public class InvoiceSearch {
 
     List<Invoice> searchByItem(Company company, String itemName) {
 
-        List<Invoice> searchResult = new ArrayList<>();
+        List<Invoice> searchItem = new ArrayList<>();
 
         for (Invoice invoice : company.getInvoices()) {
 
             for (Item item : invoice.getItems()) {
                 if (item.getName().contains(itemName)) {
-                    searchResult.add(invoice);
+                    searchItem.add(invoice);
                     break;
                 }
             }
         }
-        return searchResult;
+        return searchItem;
     }
 
     List<Invoice> searchBySeller(Company company, String sellerName) {
 
-        // rasyti paieskos algoritma
+        List<Invoice> searchSeller = new ArrayList<>();
 
-        return null;
+        for (Invoice invoice : company.getInvoices()) {
+
+            for (Partner seller: invoice.getSeller()) {
+                if (seller.getName().contains(sellerName)) {
+                    searchSeller.add(invoice);
+                    break;
+                }
+            }
+        }
+
+        return searchSeller;
 
     }
 
     List<Invoice> searchByCustomer(Company company, String customerName) {
 
-        // rasyti paieskos algoritma
+        List<Invoice> searchCustomer = new ArrayList<>();
+
 
         return null;
 

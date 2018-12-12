@@ -6,49 +6,61 @@ import java.util.List;
 
 public class InvoiceMain {
 
-        public static void main(String[] args) {
-            // Prints Customer, Seller and Item or Service to the terminal window.
+    public static void main(String[] args) {
+        // Prints Customer, Seller and Item or Service to the terminal window.
 
-            Company com = new Company();
-            // com.setInvoices(new ArrayList<>());
-           // com.getInvoices().add(new Invoice());
+        Company com = new Company();
+        // com.setInvoices(new ArrayList<>());
+        // com.getInvoices().add(new Invoice());
 
-            Invoice inv = new Invoice();
-            inv.setSeller(new Partner());
-            inv.setCustomer(new Partner());
-            inv.setInvoiceNum("First_1237"); // nepaduotas parametras ir todel siulo overloadinta etoda susikurti
-            inv.getItems().add(new Item("Kojines"));
-            inv.getItems().add(new Item("Kojines"));
-            com.getInvoices().add(inv);
+        Partner part = new Partner();
+        part.setName("Akropolis");
 
-            inv = new Invoice();
-            inv.setSeller(new Partner());
-            inv.setCustomer(new Partner());
-            inv.setInvoiceNum("Seconf_563253"); // nepaduotas parametras ir todel siulo overloadinta etoda susikurti
-            inv.getItems().add(new Item("Pirstines"));
-            inv.getItems().add(new Item("Liemene"));
-            inv.getItems().add(new Item("Kelnes"));
-            com.getInvoices().add(inv);
+        Invoice inv = new Invoice();
+        inv.setSeller(part);
+        inv.setCustomer(new Partner());
+        inv.setInvoiceNum("First_1237");
+        inv.getItems().add(new Item("Kojines"));
+        inv.getItems().add(new Item("Kojines"));
+        com.getInvoices().add(inv);
+        com.getSellers().add(part); // -----------
 
-            inv = new Invoice();
-            inv.setSeller(new Partner());
-            inv.setCustomer(new Partner());
-            inv.setInvoiceNum("Third_87675"); // nepaduotas parametras ir todel siulo overloadinta etoda susikurti
-            inv.getItems().add(new Item("Kojines"));
-            inv.getItems().add(new Item("Megztinis"));
-            com.getInvoices().add(inv);
+        inv = new Invoice();
+        part = new Partner();
+        part.setName("Rimi");
+        inv.setSeller(part);
+        inv.setCustomer(new Partner());
+        inv.setInvoiceNum("Second_563253");
+        inv.getItems().add(new Item("Pirstines"));
+        inv.getItems().add(new Item("Liemene"));
+        inv.getItems().add(new Item("Kelnes"));
+        com.getInvoices().add(inv);
+        com.getSellers().add(part); // -----------
+
+        inv = new Invoice();
+        part = new Partner();
+        part.setName("Maxima");
+        inv.setSeller(part);
+        inv.setCustomer(new Partner());
+        inv.setInvoiceNum("Third_87675");
+        inv.getItems().add(new Item("Kojines"));
+        inv.getItems().add(new Item("Megztinis"));
+        com.getInvoices().add(inv);
+        com.getSellers().add(part); // -----------
 
 
-            InvoiceSearch search = new InvoiceSearch();
+        InvoiceSearch search = new InvoiceSearch();
 
-            List<Invoice> searchResult = search.searchByItem(com, "Kojines");
+        List<Invoice> searchItem = search.searchByItem(com, "Kojines");
+        List<Invoice> searchSeller = search.searchBySeller(com, "Akropolis");
+        List<Invoice> searchCustomer = search.searchByCustomer(com, "Antanas");
 
-            for (Invoice invoice: searchResult) {
-                System.out.println( invoice.getInvoiceNum());
-            }
-
-
+        for (Invoice invoice : searchItem) {
+            System.out.println(invoice.getInvoiceNum());
         }
 
+
     }
+
+}
 
