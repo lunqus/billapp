@@ -5,7 +5,7 @@ import com.billapp.Company.Company;
 import com.billapp.Invoice.Invoice;
 import com.billapp.Item.Item;
 import com.billapp.Partner.Partner;
-import com.billapp.Search.InvoiceSearch;
+import com.billapp.Searches.InvoiceSearch;
 
 import java.util.List;
 

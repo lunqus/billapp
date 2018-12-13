@@ -1,4 +1,4 @@
-package com.billapp.Search;
+package com.billapp.Searches;
 
 import com.billapp.Company.Company;
 import com.billapp.Invoice.Invoice;
@@ -9,7 +9,7 @@ import java.util.List;
 
 public class InvoiceSearch {
 
-    List<Invoice> searchByItem(Company company, String itemName) {
+    public List<Invoice> searchByItem(Company company, String itemName) {
 
         List<Invoice> searchItem = new ArrayList<>();
 
@@ -25,7 +25,7 @@ public class InvoiceSearch {
         return searchItem;
     }
 
-    List<Invoice> searchBySeller(Company company, String sellerName) {
+    public List<Invoice> searchBySeller(Company company, String sellerName) {
 
 //        List<Invoice> searchSeller = new ArrayList<>();
 //
@@ -43,7 +43,7 @@ public class InvoiceSearch {
 
     }
 
-    List<Invoice> searchByCustomer(Company company, String customerName) {
+    public List<Invoice> searchByCustomer(Company company, String customerName) {
 
         List<Invoice> searchCustomer = new ArrayList<>();
 
