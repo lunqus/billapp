@@ -24,19 +24,19 @@ public class InvoiceSearch {
 
     List<Invoice> searchBySeller(Company company, String sellerName) {
 
-        List<Invoice> searchSeller = new ArrayList<>();
+//        List<Invoice> searchSeller = new ArrayList<>();
+//
+//        for (Invoice invoice : company.getInvoices()) {
+//
+//            for (Partner seller: invoice.getSeller()) {
+//                if (seller.getName().contains(sellerName)) {
+//                    searchSeller.add(invoice);
+//                    break;
+//                }
+//            }
+//        }
 
-        for (Invoice invoice : company.getInvoices()) {
-
-            for (Partner seller: invoice.getSeller()) {
-                if (seller.getName().contains(sellerName)) {
-                    searchSeller.add(invoice);
-                    break;
-                }
-            }
-        }
-
-        return searchSeller;
+        return null;
 
     }
 
