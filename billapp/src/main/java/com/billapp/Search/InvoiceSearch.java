@@ -1,6 +1,9 @@
-package com.billapp;
+package com.billapp.Search;
 
-import java.io.PrintStream;
+import com.billapp.Company.Company;
+import com.billapp.Invoice.Invoice;
+import com.billapp.Item.Item;
+
 import java.util.ArrayList;
 import java.util.List;
 

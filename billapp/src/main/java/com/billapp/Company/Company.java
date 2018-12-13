@@ -1,4 +1,7 @@
-package com.billapp;
+package com.billapp.Company;
+
+import com.billapp.Invoice.Invoice;
+import com.billapp.Partner.Partner;
 
 import java.util.ArrayList;
 import java.util.List;
