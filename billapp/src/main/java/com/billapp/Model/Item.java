@@ -1,4 +1,4 @@
-package com.billapp.Items;
+package com.billapp.Model;
 
 public class Item {
 

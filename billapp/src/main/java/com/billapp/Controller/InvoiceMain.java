@@ -1,11 +1,11 @@
-package com.billapp;
+package com.billapp.Controller;
 
 
-import com.billapp.Company.Company;
-import com.billapp.Invoices.Invoice;
-import com.billapp.Items.Item;
-import com.billapp.Partners.Partner;
-import com.billapp.Searches.InvoiceSearch;
+import com.billapp.Model.Company;
+import com.billapp.Model.Invoice;
+import com.billapp.Model.Item;
+import com.billapp.Model.Partner;
+import com.billapp.Controller.InvoiceSearch;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.billapp.Partners;
+package com.billapp.Model;
 
 public class Partner {
 
