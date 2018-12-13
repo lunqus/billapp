@@ -28,7 +28,7 @@ public class InvoiceMain {
         inv.getItems().add(new Item("Kojines"));
         inv.getItems().add(new Item("Kojines"));
         com.getInvoices().add(inv);
-        com.getSellers().add(part); // -----------
+        //com.getSellers().add(part); // -----------
 
         inv = new Invoice();
         part = new Partner();
@@ -40,7 +40,7 @@ public class InvoiceMain {
         inv.getItems().add(new Item("Liemene"));
         inv.getItems().add(new Item("Kelnes"));
         com.getInvoices().add(inv);
-        com.getSellers().add(part); // -----------
+        //com.getSellers().add(part); // -----------
 
         inv = new Invoice();
         part = new Partner();
@@ -51,7 +51,7 @@ public class InvoiceMain {
         inv.getItems().add(new Item("Kojines"));
         inv.getItems().add(new Item("Megztinis"));
         com.getInvoices().add(inv);
-        com.getSellers().add(part); // -----------
+        //com.getSellers().add(part); // -----------
 
 
         InvoiceSearch search = new InvoiceSearch();
@@ -61,9 +61,15 @@ public class InvoiceMain {
         List<Invoice> searchCustomer = search.searchByCustomer(com, "Antanas");
 
         for (Invoice invoice : searchItem) {
-            System.out.println(invoice.getInvoiceNum());
+            System.out.println("Sąskaitos Nr. " + invoice.getInvoiceNum() + " " + "Prekės: " + invoice.getItems());
         }
 
+        System.out.println("_______");
+        System.out.println();
+
+        for (Invoice invoice : searchSeller) {
+            System.out.println("Sąskaitos Nr. " + invoice.getInvoiceNum() + " " + "Įmonė: " + invoice.getSeller().getName());
+        }
 
     }
 
