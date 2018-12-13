@@ -1,8 +1,8 @@
 package com.billapp.Searches;
 
 import com.billapp.Company.Company;
-import com.billapp.Invoice.Invoice;
-import com.billapp.Item.Item;
+import com.billapp.Invoices.Invoice;
+import com.billapp.Items.Item;
 
 import java.util.ArrayList;
 import java.util.List;
