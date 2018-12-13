@@ -12,7 +12,7 @@ public class InvoiceSearch {
     public List<Invoice> searchByItem(Company company, String itemName) {
 
         List<Invoice> searchItem = new ArrayList<>();
-        List<Invoice> searchItems = new ArrayList<>();
+        //List<Invoice> searchItems = new ArrayList<>();
 
         for (Invoice invoice : company.getInvoices()) {
 
@@ -20,10 +20,10 @@ public class InvoiceSearch {
 
                 if (item.getName().contains(itemName)) {
                     searchItem.add(invoice);
+
                     break;
                 }
 
-                searchItems.add(invoice);
             }
         }
         return searchItem;
@@ -37,8 +37,6 @@ public class InvoiceSearch {
 
                 if (invoice.getSeller().getName().contains(sellerName)) {
                     searchSeller.add(invoice);
-                    break;
-
             }
         }
 
@@ -50,8 +48,15 @@ public class InvoiceSearch {
 
         List<Invoice> searchCustomer = new ArrayList<>();
 
+        for (Invoice invoice : company.getInvoices()) {
 
-        return null;
+            if (invoice.getCustomer().getName().contains(customerName)) {
+                searchCustomer.add(invoice);
+
+            }
+        }
+
+        return searchCustomer;
 
     }
 }

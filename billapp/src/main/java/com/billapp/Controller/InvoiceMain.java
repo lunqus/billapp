@@ -23,7 +23,11 @@ public class InvoiceMain {
 
         Invoice inv = new Invoice();
         inv.setSeller(part);
-        inv.setCustomer(new Partner());
+        // ---
+        part = new Partner();
+        inv.setCustomer(part);
+        part.setName("Antanas");
+        // ---
         inv.setInvoiceNum("First_1237");
         inv.getItems().add(new Item("Kojines"));
         inv.getItems().add(new Item("Kojines"));
@@ -34,7 +38,12 @@ public class InvoiceMain {
         part = new Partner();
         part.setName("Rimi");
         inv.setSeller(part);
-        inv.setCustomer(new Partner());
+        // ---
+        part = new Partner();
+        inv.setCustomer(part);
+        part.setName("Petras");
+        // ---
+        // inv.setCustomer(new Partner());
         inv.setInvoiceNum("Second_563253");
         inv.getItems().add(new Item("Pirstines"));
         inv.getItems().add(new Item("Liemene"));
@@ -46,7 +55,12 @@ public class InvoiceMain {
         part = new Partner();
         part.setName("Maxima");
         inv.setSeller(part);
-        inv.setCustomer(new Partner());
+        // ---
+        part = new Partner();
+        inv.setCustomer(part);
+        part.setName("Antanas");
+        // ---
+        // inv.setCustomer(new Partner());
         inv.setInvoiceNum("Third_87675");
         inv.getItems().add(new Item("Kojines"));
         inv.getItems().add(new Item("Megztinis"));
@@ -60,8 +74,13 @@ public class InvoiceMain {
         List<Invoice> searchSeller = search.searchBySeller(com, "Akropolis");
         List<Invoice> searchCustomer = search.searchByCustomer(com, "Antanas");
 
+        System.out.println();
+
         for (Invoice invoice : searchItem) {
-            System.out.println("Sąskaitos Nr. " + invoice.getInvoiceNum() + " " + "Prekės: " + invoice.getItems());
+            System.out.println("Sąskaitos Nr. " + invoice.getInvoiceNum() + " " + "Prekės: ");
+            for (Item item : invoice.getItems()){
+                System.out.println(item.getName());
+            }
         }
 
         System.out.println("_______");
@@ -71,6 +90,12 @@ public class InvoiceMain {
             System.out.println("Sąskaitos Nr. " + invoice.getInvoiceNum() + " " + "Įmonė: " + invoice.getSeller().getName());
         }
 
+        System.out.println("_______");
+        System.out.println();
+
+        for (Invoice invoice : searchCustomer) {
+            System.out.println("Sąskaitos Nr. " + invoice.getInvoiceNum() + " " + "Klientas: " + invoice.getCustomer().getName());
+        }
     }
 
 }
