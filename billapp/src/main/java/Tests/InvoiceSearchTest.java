@@ -39,7 +39,7 @@ public class InvoiceSearchTest {
             }
         }
         for (Invoice invoice : searchItem) {
-            System.out.println("Sąskaitos Nr. " + invoice.getInvoiceNum() + " " + "Prekės: ");
+            System.out.println(invoice.getInvoiceNum());
             for (Item item : invoice.getItems()){
                 System.out.println(item.getName());
             }
