@@ -4,6 +4,7 @@ import com.billapp.Controller.InvoiceSearch;
 import com.billapp.Model.Company;
 import com.billapp.Model.Invoice;
 import com.billapp.Model.Item;
+import com.billapp.Model.Partner;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -16,12 +17,13 @@ public class InvoiceSearchTest {
 
     Invoice inv = new Invoice();
     Company com = new Company();
+    Partner part = new Partner();
 
     private final InvoiceSearch searchTest = new InvoiceSearch();
-    String itemName = "Kojines";
+    // String itemName = "Kojines";
 
     @Test
-    public void searchByItem(Company company, String itemName) {
+    public void searchByItem (Company company, String itemName) {
 
         List<Invoice> searchItem = new ArrayList<>();
         //List<Invoice> searchItems = new ArrayList<>();
@@ -32,8 +34,6 @@ public class InvoiceSearchTest {
 
                 if (item.getName().contains(itemName)) {
                     searchItem.add(invoice);
-
-                    break;
                 }
 
             }
