@@ -13,7 +13,7 @@ public class InvoiceSearchTest {
     @Test
     public void searchByItem() {
 
-    assertArrayEquals(searchTest.searchByItem().contains("Kojines"));
+        assertArrayEquals(searchTest.searchByItem().contains("Kojines"));
 
     }
 }
