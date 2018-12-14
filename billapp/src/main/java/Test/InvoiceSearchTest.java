@@ -1,6 +1,7 @@
 package Test;
 
 import com.billapp.Controller.InvoiceSearch;
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
