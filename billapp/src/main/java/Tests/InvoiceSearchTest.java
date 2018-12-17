@@ -1,17 +1,14 @@
-package Test;
+import java.util.List;
+
+import org.junit.Test;
 
 import com.billapp.Controller.InvoiceSearch;
 import com.billapp.Model.Company;
 import com.billapp.Model.Invoice;
 import com.billapp.Model.Item;
 import com.billapp.Model.Partner;
-import org.junit.Assert;
-import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class InvoiceSearchTest {
 
@@ -19,34 +16,66 @@ public class InvoiceSearchTest {
     Company com = new Company();
     Partner part = new Partner();
 
-    private final InvoiceSearch searchTest = new InvoiceSearch();
-    // String itemName = "Kojines";
-
     @Test
-    public void searchByItem (Company company, String itemName) {
+    public void searchByItem() {
+        Company com = new Company();
+        // com.setInvoices(new ArrayList<>());
+        // com.getInvoices().add(new Invoice());
 
-        List<Invoice> searchItem = new ArrayList<>();
-        //List<Invoice> searchItems = new ArrayList<>();
+        Partner part = new Partner();
+        part.setName("Akropolis");
 
-        for (Invoice invoice : company.getInvoices()) {
+        Invoice inv = new Invoice();
+        inv.setSeller(part);
+        // ---
+        part = new Partner();
+        inv.setCustomer(part);
+        part.setName("Antanas");
+        // ---
+        inv.setInvoiceNum("First_1237");
+        inv.getItems().add(new Item("Kojines"));
+        inv.getItems().add(new Item("Kojines"));
+        com.getInvoices().add(inv);
+        // com.getSellers().add(part); // -----------
 
-            for (Item item : invoice.getItems()) {
+        inv = new Invoice();
+        part = new Partner();
+        part.setName("Rimi");
+        inv.setSeller(part);
+        // ---
+        part = new Partner();
+        inv.setCustomer(part);
+        part.setName("Petras");
+        // ---
+        // inv.setCustomer(new Partner());
+        inv.setInvoiceNum("Second_563253");
+        inv.getItems().add(new Item("Pirstines"));
+        inv.getItems().add(new Item("Liemene"));
+        inv.getItems().add(new Item("Kelnes"));
+        com.getInvoices().add(inv);
+        // com.getSellers().add(part); // -----------
 
-                if (item.getName().contains(itemName)) {
-                    searchItem.add(invoice);
-                }
+        inv = new Invoice();
+        part = new Partner();
+        part.setName("Maxima");
+        inv.setSeller(part);
+        // ---
+        part = new Partner();
+        inv.setCustomer(part);
+        part.setName("Antanas");
+        // ---
+        // inv.setCustomer(new Partner());
+        inv.setInvoiceNum("Third_87675");
+        inv.getItems().add(new Item("Kojines"));
+        inv.getItems().add(new Item("Megztinis"));
+        com.getInvoices().add(inv);
+        // com.getSellers().add(part); // -----------
 
-            }
-        }
-        for (Invoice invoice : searchItem) {
-            System.out.println(invoice.getInvoiceNum());
-            for (Item item : invoice.getItems()){
-                System.out.println(item.getName());
-            }
+        InvoiceSearch search = new InvoiceSearch();
 
-    }
+        List<Invoice> searchItem = search.searchByItem(com, "Kojines");
 
-
+        assertEquals(2, searchItem.size());
     }
 
 }
